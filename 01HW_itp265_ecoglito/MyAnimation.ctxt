@@ -2,5 +2,13 @@
 comment0.target=MyAnimation
 comment0.text=\r\n\ This\ prints\ out\ some\ ASCII\ art\r\n\r\n\ @author\ Enzo\ Coglitore\r\n\ ITP\ 265,\ Term\ Year\ (Fall\ 2020),\ Class\ Session\ (Coffee)\r\n\ Assignment\ 00\r\n\ Email\:\ ecoglito@usc.edu\r\n
 comment1.params=
-comment1.target=void\ main()
-numComments=2
+comment1.target=void\ drawFrame1()
+comment2.params=
+comment2.target=void\ drawFrame2()
+comment3.params=
+comment3.target=void\ run()
+comment4.params=ms
+comment4.target=void\ pause(int)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

@@ -9,11 +9,34 @@
  */
 public class MyAnimation
 {
-    public static void main(){
- 
+    public void drawFrame1(){
         System.out.println("^..^      /\n" + "/_/\\_____/\n" + "   /\\   /\\\n" + "  /  \\ /  \\\n");
-      
-        System.out.println("^..^      \\\n" + "/_/\\_____/\n" + "   /\\   /\\\n" + "  /  \\ /  \\\n");
-        
     }
+    
+     public void drawFrame2(){
+        System.out.println("^..^      \\\n" + "/_/\\_____/\n" + "   /\\   /\\\n" + "  /  \\ /  \\\n");
+    }
+    
+    public void run() {
+        for(int i = 0; i < 10; i++){
+            drawFrame1();
+            pause(299);
+            drawFrame2();
+            pause(299);
+        }
+    }
+    
+    public void pause(int ms){
+        try{
+            Thread.sleep(ms);
+        }
+        catch(InterruptedException e){
+        }
+    }
+    
+    public static void main(String[] args){
+        MyAnimation animationObject = new MyAnimation();
+        animationObject.run();
+    }
+    
 }
