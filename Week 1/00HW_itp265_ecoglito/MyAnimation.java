@@ -9,15 +9,15 @@
  */
 public class MyAnimation
 {
-    public void drawFrame1(){
+    public void drawFrame1(){ //draw first frame
         System.out.println("^..^      /\n" + "/_/\\_____/\n" + "   /\\   /\\\n" + "  /  \\ /  \\\n");
     }
     
-     public void drawFrame2(){
+     public void drawFrame2(){ //draw second frame
         System.out.println("^..^      \\\n" + "/_/\\_____/\n" + "   /\\   /\\\n" + "  /  \\ /  \\\n");
     }
     
-    public void run() {
+    public void run() { //calls on frame 1 then frame 2
         for(int i = 0; i < 10; i++){
             drawFrame1();
             pause(299);
@@ -26,7 +26,7 @@ public class MyAnimation
         }
     }
     
-    public void pause(int ms){
+    public void pause(int ms){ //stops and starts the run thread
         try{
             Thread.sleep(ms);
         }
@@ -34,7 +34,7 @@ public class MyAnimation
         }
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args){ //lets you run automatically
         MyAnimation animationObject = new MyAnimation();
         animationObject.run();
     }

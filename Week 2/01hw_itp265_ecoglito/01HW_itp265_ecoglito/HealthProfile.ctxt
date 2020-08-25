@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=HealthProfile
+comment1.params=
+comment1.target=void\ inputPatientInformation()
+comment2.params=
+comment2.target=void\ printRecord()
+comment3.params=
+comment3.target=int\ calculateAge()
+comment4.params=
+comment4.target=java.lang.String\ getTargetHeartRateInfo()
+comment5.params=
+comment5.target=void\ displayBMIChart()
+comment6.params=
+comment6.target=void\ printFancyRecord()
+numComments=7
