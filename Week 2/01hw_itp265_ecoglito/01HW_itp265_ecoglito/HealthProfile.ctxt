@@ -10,6 +10,4 @@ comment4.params=
 comment4.target=java.lang.String\ getTargetHeartRateInfo()
 comment5.params=
 comment5.target=void\ displayBMIChart()
-comment6.params=
-comment6.target=void\ printFancyRecord()
-numComments=7
+numComments=6

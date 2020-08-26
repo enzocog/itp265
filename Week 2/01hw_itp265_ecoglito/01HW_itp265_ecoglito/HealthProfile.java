@@ -63,13 +63,26 @@ public class HealthProfile
       System.out.println("Please enter all of your allergies in a list:");
       allergyList = myScanner.nextLine();
     }
-  public void printRecord(){ //print simple record
-       System.out.println("Name: " + firstName + " " + lastName);
-       System.out.println("Gender: " + genderChar);
-       System.out.println("DOB: " + birthMonth + "/" + birthDay + "/" + birthYear);
-       System.out.println("Height: " + Height + " inches");
-       System.out.println("Weight: " + Weight + " pounds");
-       System.out.println("Allergies: " + allergyList);
+  public void printRecord(){ //print record + fancy edition
+        for (int i = 0; i <75; i++){
+        System.out.print("*");
+    };
+    System.out.println("");
+    System.out.println("Health Profile:");
+    System.out.println("* Name: " + firstName + " " + lastName);
+    System.out.println("* Gender: " + genderChar);
+    System.out.println("* DOB: " + birthMonth + "/" + birthDay + "/" + birthYear);
+    System.out.println("* Height: " + Height + " inches");
+    System.out.println("* Weight: " + Weight + " pounds");
+    System.out.println("* Age: " + calculateAge());
+    System.out.println("* ❤ Info: " + getTargetHeartRateInfo());
+    System.out.println("* ALLERGIES: " + allergyList);
+    if (covidPositive){
+        System.out.println("* ALERT: COVID POSITIVE");
+    }
+    for (int i = 0; i <75; i++){
+        System.out.print("*");
+    };
     }
   public int calculateAge(){ //calculate user age w/ specific date accountability
     LocalDate today = LocalDate.now();
@@ -117,26 +130,5 @@ public class HealthProfile
      System.out.println("Obese: 30 or greater."); 
      System.out.println("");
      System.out.println("Your BMI value is: " + bmiValue + " which puts you in the " + bmiType + " category."); 
-  }
-  public void printFancyRecord(){ //print out fancy record
-      for (int i = 0; i <75; i++){
-        System.out.print("*");
-    };
-    System.out.println("");
-    System.out.println("Health Profile:");
-    System.out.println("* Name: " + firstName + " " + lastName);
-    System.out.println("* Gender: " + genderChar);
-    System.out.println("* DOB: " + birthMonth + "/" + birthDay + "/" + birthYear);
-    System.out.println("* Height: " + Height + " inches");
-    System.out.println("* Weight: " + Weight + " pounds");
-    System.out.println("* Age: " + calculateAge());
-    System.out.println("* ❤ Info: " + getTargetHeartRateInfo());
-    System.out.println("* ALLERGIES: " + allergyList);
-    if (covidPositive){
-        System.out.println("* ALERT: COVID POSITIVE");
-    }
-    for (int i = 0; i <75; i++){
-        System.out.print("*");
-    };
   }
 }
