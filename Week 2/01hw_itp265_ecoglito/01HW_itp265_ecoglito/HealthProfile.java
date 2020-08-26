@@ -26,13 +26,13 @@ public class HealthProfile
       Scanner myScanner = new Scanner(System.in);
       System.out.println("Welcome to the HealthProfile system. Please enter patient information.");
       System.out.println("Please enter first name:");
-      firstName = myScanner.nextLine();
+      firstName = myScanner.next();
       
       System.out.println("Please enter last name:");
-      lastName = myScanner.nextLine();
+      lastName = myScanner.next();
       System.out.println("Please enter gender (M/F/O):");
       
-      Gender = myScanner.nextLine();
+      Gender = myScanner.next();
       genderChar = Gender.charAt(0);
       
       System.out.println("Please enter birth month (1-12):");
@@ -51,7 +51,7 @@ public class HealthProfile
       Weight = myScanner.nextInt();
       
       System.out.println("Have you tested positive for Covid (Y/N)");
-      myScanner.nextLine();
+      myScanner.next();
       covidChecker = myScanner.nextLine();
       if (covidChecker.equalsIgnoreCase("y")) {
           covidPositive = true;
@@ -83,6 +83,7 @@ public class HealthProfile
     for (int i = 0; i <75; i++){
         System.out.print("*");
     };
+    System.out.println();
     }
   public int calculateAge(){ //calculate user age w/ specific date accountability
     LocalDate today = LocalDate.now();
@@ -131,4 +132,10 @@ public class HealthProfile
      System.out.println("");
      System.out.println("Your BMI value is: " + bmiValue + " which puts you in the " + bmiType + " category."); 
   }
+  public static void main(String[] args){ //main method
+	HealthProfile record = new HealthProfile(); // same as right-click to make object
+	record.inputPatientInformation(); //click on red box to call method
+	record.printRecord(); // click on reb box to call next method
+	record.displayBMIChart();
+}
 }
