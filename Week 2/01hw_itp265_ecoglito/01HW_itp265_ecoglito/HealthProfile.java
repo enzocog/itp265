@@ -22,6 +22,9 @@ public class HealthProfile
   private String covidChecker;
   private boolean covidPositive;
   private String allergyList;
+  private String healthyLifeStyleCheck;
+  private boolean healthyLifeStyle;
+  private String healthyLifeStyleQuestions;
   public void inputPatientInformation(){ //do user input
       Scanner myScanner = new Scanner(System.in);
       System.out.println("Welcome to the HealthProfile system. Please enter patient information.");
@@ -59,9 +62,22 @@ public class HealthProfile
        else {
            covidPositive = false;
         }
+        
+      System.out.println("Do you live a healthy lifestyle? (Y/N)"); //extra credit 
+      healthyLifeStyleCheck = myScanner.nextLine();
+      if (healthyLifeStyleCheck.equalsIgnoreCase("y")) {
+          healthyLifeStyle = true;
+          System.out.println("Please enter a list of what you do in your healthy life style!");
+          healthyLifeStyleQuestions = myScanner.nextLine();
+        }
+       else {
+           healthyLifeStyle = false;
+        }
       
       System.out.println("Please enter all of your allergies in a list:");
       allergyList = myScanner.nextLine();
+      
+      
     }
   public void printRecord(){ //print record + fancy edition
         for (int i = 0; i <75; i++){
@@ -76,6 +92,9 @@ public class HealthProfile
     System.out.println("* Weight: " + Weight + " pounds");
     System.out.println("* Age: " + calculateAge());
     System.out.println("* ❤ Info: " + getTargetHeartRateInfo());
+    if (healthyLifeStyle){
+        System.out.println("* Healthy Life Style: " + healthyLifeStyleQuestions);
+    }
     System.out.println("* ALLERGIES: " + allergyList);
     if (covidPositive){
         System.out.println("* ALERT: COVID POSITIVE");
@@ -98,6 +117,7 @@ public class HealthProfile
     };
     return year - birthYear;
 }
+
   public String getTargetHeartRateInfo(){ //get target heart rate
     LocalDate today = LocalDate.now();
     int year = today.getYear();
@@ -109,6 +129,7 @@ public class HealthProfile
     String heartRate = ("Maximum Heart Rate: " + maximumHeartRate + " beats per minute. Target Heart Range: " + targetHeartRateLower + " - " + targetHeartRateUpper);  
     return heartRate;
     }
+    
   public void displayBMIChart(){ //get the bmi chart and print values
      double bmiValue = (703 * (Weight/(Height*Height)));
      String bmiType = "";
