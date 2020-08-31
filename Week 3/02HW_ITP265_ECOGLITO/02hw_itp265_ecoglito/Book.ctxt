@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Book
+comment0.text=\ This\ provides\ book\ Teaque\n\n\ @author\ Enzo\ Coglitore\n\ ITP\ 265,\ Term\ Year\ (Fall\ 2020),\ Class\ Session\ (Coffee)\n\ Assignment\ 02\n\ Email\:\ ecoglito@usc.edu\n
+comment1.params=bTitle\ bAuthor\ bPrice\ bFormat\ bNumPages
+comment1.target=Book(java.lang.String,\ java.lang.String,\ double,\ java.lang.String,\ int)
+comment10.params=bookNumPages
+comment10.target=void\ setNumPages(int)
+comment11.params=
+comment11.target=java.lang.String\ toString()
+comment2.params=title\ author\ numPages
+comment2.target=Book(java.lang.String,\ java.lang.String,\ int)
+comment3.params=
+comment3.target=java.lang.String\ getTitle()
+comment4.params=
+comment4.target=java.lang.String\ getAuthor()
+comment5.params=
+comment5.target=double\ getPrice()
+comment6.params=bookPrice
+comment6.target=void\ setPrice(double)
+comment7.params=
+comment7.target=java.lang.String\ getFormat()
+comment8.params=bookFormat
+comment8.target=void\ setFormat(java.lang.String)
+comment9.params=
+comment9.target=int\ getNumPages()
+numComments=12

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=BookTeaque
+comment0.text=\n\ This\ provides\ book\ Teaque\n\n\ @author\ Enzo\ Coglitore\n\ ITP\ 265,\ Term\ Year\ (Fall\ 2020),\ Class\ Session\ (Coffee)\n\ Assignment\ 02\n\ Email\:\ ecoglito@usc.edu\n
+comment1.params=
+comment1.target=BookTeaque()
+comment2.params=
+comment2.target=void\ printInventory()
+comment3.params=
+comment3.target=void\ bookAdder()
+comment4.params=
+comment4.target=void\ shop()
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6
