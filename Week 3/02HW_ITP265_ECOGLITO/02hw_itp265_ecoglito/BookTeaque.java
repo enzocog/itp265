@@ -8,7 +8,7 @@
  * Email: ecoglito@usc.edu
  */
 public class BookTeaque
-{
+{ //init variables
     private String storeName;
     private Book Book1;
     private Book Book2;
@@ -22,7 +22,7 @@ public class BookTeaque
     private String userChoice;
     Scanner myScanner = new Scanner(System.in);
     
-    public BookTeaque(){
+    public BookTeaque(){ //init the constructor with the new values
         this.storeName = "Enzo's store";
         this.currentOrder = "";
       
@@ -66,49 +66,56 @@ public class BookTeaque
         System.out.println();
     }
     
-    public void shop(){
+    public void shop(){ //create shop method
         boolean loopVar = true;
-        printInventory();
+        printInventory(); //print inventory method
         while (loopVar){
         System.out.println("Do you want to buy a book/beverage/checkout? (book, beverage, checkout)");
-     
-        userChoice = myScanner.next();
-        
-        
-            if (userChoice.equalsIgnoreCase("book")) {
+        userChoice = myScanner.next(); // ask for user choice
+            if (userChoice.equalsIgnoreCase("book")) { //if book then execute below
                 System.out.println("Awesome! Choose a book number between 1-5 (enter 1-5)");   
                 myScanner.nextLine();
-                
                 boolean userBookChoiceBool = true;
-                
                 while (userBookChoiceBool) {
-                if (myScanner.hasNextInt()){
-   
-                int userBookChoice = myScanner.nextInt();
-                
-                    if (userBookChoice <= 5 && userBookChoice >= 1) {
-                    currentOrder =  bookChecker(userBookChoice);
-                    userBookChoiceBool = false;
-                    }
-                    else{
-                    System.out.println("You are not in the valid range [1-5]");
-                    }
-                }  
+                if (myScanner.hasNextInt()){ //if input has an int,
+                    int userBookChoice = myScanner.nextInt(); //ask for their book choi
+                        if (userBookChoice <= 5 && userBookChoice >= 1) {
+                        currentOrder =  bookChecker(userBookChoice); //call bookChecker helper method to see if in range
+                        userBookChoiceBool = false;
+                        }
+                        else{
+                        System.out.println("You are not in the valid range [1-5]"); //tell them they out of range
+                        }
+                  }  
                 else {
                 myScanner.nextLine();
-                System.out.println("That was not a number!"); 
-                }
-            } 
-        }   
-                
-            
-            else if (userChoice.equalsIgnoreCase("beverage")) {
+                System.out.println("That was not a number!"); //tell them their input was bad
+                 }
+               } 
+            }  
+            else if (userChoice.equalsIgnoreCase("beverage")) { //same methodology for beverage
                 System.out.println("Awesome! Choose a book number between 1-3 (enter 1-3)");
-                int userBeverageChoice = myScanner.nextInt();
-                currentOrder = beverageChecker(userBeverageChoice);
+                myScanner.nextLine(); //clear
+                boolean userBeverageChoiceBool = true;
+                while (userBeverageChoiceBool) { //while this loop is true
+                if (myScanner.hasNextInt()){ //check if int
+                    int userBeverageChoice = myScanner.nextInt(); //ask for input
+                    if (userBeverageChoice <= 3 && userBeverageChoice >= 1) { //if it is
+                    currentOrder = beverageChecker(userBeverageChoice); //run our switch/case
+                    userBeverageChoiceBool = false;
+                    }
+                    else { //print invalid range
+                        System.out.println("You are not in the valid range [1-3]");
+                    }
             }
-            else if (userChoice.equalsIgnoreCase("checkout")) {
-                System.out.println("Thank you for shopping at " + storeName + ". You bought: " + currentOrder + ".");
+            else { //print invalid input
+                myScanner.nextLine();
+                System.out.println("That was not a number!"); //tell them their input was bad
+                 }
+        }
+        }
+            else if (userChoice.equalsIgnoreCase("checkout")) { //print values at checkout
+                System.out.println("Thank you for shopping at " + storeName + ". You bought: " + currentOrder);
                 loopVar = false;
             }
             else {
@@ -118,7 +125,7 @@ public class BookTeaque
     }
     
     public String bookChecker(int userBookChoice){ //check for their int input
-         switch (userBookChoice) {
+         switch (userBookChoice) { //case statement for book
                     case 1:
                         System.out.println("You purchased book1!");
                         currentOrder = currentOrder + "book1 ";
@@ -144,8 +151,8 @@ public class BookTeaque
     } 
     
     public String beverageChecker(int userBeverageChoice){ //check for their int input for beverage 
-        switch (userBeverageChoice) {
-                    case 1:
+        switch (userBeverageChoice) { 
+                    case 1: //case statement for books
                         System.out.println("You purchased beverage1!");
                         currentOrder = currentOrder + "beverage1 ";
                         break;
@@ -161,7 +168,7 @@ public class BookTeaque
         return currentOrder;
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args){ //run main command
     BookTeaque myStore = new BookTeaque();
     myStore.shop();
 }
