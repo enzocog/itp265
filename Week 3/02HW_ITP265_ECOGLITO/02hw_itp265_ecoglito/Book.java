@@ -62,8 +62,13 @@ public class Book{
         return "\"" + title + "\""+ " by " + author + " (" + format + ";" + numPages + " pages)" + " $" + price;
     }
     
-    /**public boolean equals(){ //method for checking if books are equal
-        return(name.equals(price)); //
+    public boolean equals(Book other){ //equals method book
+        return (
+                this.getTitle().equalsIgnoreCase(other.title) 
+                && this.getAuthor().equals(other.author) 
+                && Math.abs(this.getPrice() - other.price) <= 0.0001 
+                && this.getFormat().equals(other.format) 
+                && this.getNumPages() == other.numPages);
     }
-    */
+    
 }

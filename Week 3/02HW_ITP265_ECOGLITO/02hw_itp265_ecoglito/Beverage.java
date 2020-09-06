@@ -38,7 +38,8 @@ public class Beverage
         return name + " " + price;
     }
     
-    public boolean equals(){ //method for checking if price and name are equal
-        return(name.equals(price));
+    public boolean equals(Beverage other){ //equals method
+        return (this.getName().equals(other.name) 
+        && Math.abs(this.getPrice()-other.price) <= 0.0001);
     }
 }
