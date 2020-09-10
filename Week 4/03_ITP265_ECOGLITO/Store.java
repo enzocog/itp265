@@ -1,4 +1,4 @@
- import java.util.Scanner; //import scanner
+import java.util.Scanner; //import scanner
 /**
  * This allows users to see our books/beverages and buy them
  *
@@ -7,9 +7,12 @@
  * Assignment 02
  * Email: ecoglito@usc.edu
  */
-public class BookTeaque
+public class Store
 { //init variables
     private String storeName;
+    private CreditCard CreditCard1;
+    private Scanner myScanner;
+    
     private Book Book1;
     private Book Book2;
     private Book Book3;
@@ -20,24 +23,46 @@ public class BookTeaque
     private Beverage Beverage3;
     private String currentOrder;
     private String userChoice;
-    Scanner myScanner = new Scanner(System.in);
 
     
-    public BookTeaque(){ //init the constructor with the new values
-        this.storeName = "Enzo's store";
-        this.currentOrder = "";
-      
-        Book1 = new Book("Lord of the Flies", "William Golding", 5.99, "Hardcover", 224);
-        Book2 = new Book("Intelligent Investor", "Benjamin Graham", 14.29, "Hardcover", 640);
-        Book3 = new Book("Kindred", "Ocatvia Butler", 10.49, "Hardcover", 264);
-        Book4 = new Book("The Alchemist", "Paulo Coelho", 14.29, "Hardcover", 163);
-        Book5 = new Book("Extreme Ownership", "Jocko Willink", 13.97, "Hardcover", 351);
-        
-        Beverage1 = new Beverage("Kombucha", 9.50);
-        Beverage2 = new Beverage("Iced Coffee", 4.50);
-        Beverage3 = new Beverage("Water", 2.50);
-     
+    public Store(){
+    myScanner = new Scanner(System.in);
+    this.storeName = "Enzo's store";
+    makeUser();
+    
+    Book1 = new Book("Lord of the Flies", "William Golding", 5.99, "Hardcover", 224);
+    Book2 = new Book("Intelligent Investor", "Benjamin Graham", 14.29, "Hardcover", 640);
+    Book3 = new Book("Kindred", "Ocatvia Butler", 10.49, "Hardcover", 264);
+    Book4 = new Book("The Alchemist", "Paulo Coelho", 14.29, "Hardcover", 163);
+    Book5 = new Book("Extreme Ownership", "Jocko Willink", 13.97, "Hardcover", 351);
+    
+    Beverage1 = new Beverage("Kombucha", 9.50);
+    Beverage2 = new Beverage("Iced Coffee", 4.50);
+    Beverage3 = new Beverage("Water", 2.50);
+    
+    
     }
+        
+    private void makeUser() {
+        
+        System.out.println("Before you can get to the store, we need you to make a credit card!");
+        System.out.println("What is your name?");
+        String cName = myScanner.nextLine();
+        System.out.println("What is your zip code?");
+        int czipCode = myScanner.nextInt();
+        System.out.println("Enter your credit card number (16 digits w/ spaces)");
+        myScanner.nextLine();
+        String cNumber = myScanner.nextLine();
+        System.out.println("Enter your security code (3 digits)");
+        int csecurityCode = myScanner.nextInt();
+        System.out.println("Enter your expiration date");
+        myScanner.nextLine();
+        String cexpirationDate = myScanner.nextLine();
+        CreditCard1 = new CreditCard(cName, czipCode, cNumber, cexpirationDate, csecurityCode, 500.0);
+        
+    }
+        
+    
     
     public void printInventory(){ //print inventory
         for (int i = 0; i <75; i++){
@@ -47,7 +72,11 @@ public class BookTeaque
         System.out.println("Welcome to: " + storeName);
         System.out.println();
         
-        System.out.println("Here are our list of books:");
+        System.out.println("Here is your credit card:");
+        System.out.println(CreditCard1.toString());
+        
+        System.out.println();
+        System.out.println("Here is our list of books:");
         System.out.println(Book1.toString());
         System.out.println(Book2.toString());
         System.out.println(Book3.toString());
@@ -96,6 +125,9 @@ public class BookTeaque
                 case 1:
                     System.out.println("You purchased book1!");
                     currentOrder = currentOrder + "book1 ";
+                    double newBalance = Book1.getPrice();
+                    CreditCard1.setBalance(newBalance);
+                    System.out.println(CreditCard1.getBalance());
                     break;
                 case 2:
                     System.out.println("You purchased book2!");
@@ -175,7 +207,8 @@ public class BookTeaque
                 beverageChecker(beverageInputRangeChecker("Please choose a number between 1-3!", 1, 3)); //run all methods
         }
             else if (userChoice.equalsIgnoreCase("checkout")) { //print values at checkout
-                System.out.println("Thank you for shopping at " + storeName + ". You bought: " + currentOrder); //print checkout
+                System.out.println("Thank you for shopping at " + storeName + ". You bought: " + currentOrder);
+                System.out.println("Your new balance is:" + CreditCard1.getBalance());//print checkout
                 loopVar = false; //end loop
             }
             else { //error handle for userInput choice
@@ -186,7 +219,7 @@ public class BookTeaque
     
     
     public static void main(String[] args){ //run main command
-    BookTeaque myStore = new BookTeaque();
+    Store myStore = new Store();
     myStore.shop();
 }
    

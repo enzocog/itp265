@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Owner
+comment0.text=\n\ Brief\ description\ of\ the\ class\n\ @author\ Kendra\ Walther\n\ email\:\ kwalther@usc.edu\n\ ITP\ 265\n\ *\ In\ Class\ Activity,\ Week\ 3\n
+comment1.params=name\ money\ myPet
+comment1.target=Owner(java.lang.String,\ double,\ Pet)
+comment2.params=name\ money
+comment2.target=Owner(java.lang.String,\ double)
+comment3.params=
+comment3.target=double\ getMoney()
+comment3.text=\n\ @return\ the\ money\n
+comment4.params=money
+comment4.target=void\ setMoney(double)
+comment4.text=\n\ @param\ money\ the\ money\ to\ set\n
+comment5.params=
+comment5.target=Pet\ getMyPet()
+comment5.text=\n\ @return\ the\ myPet\n
+comment6.params=myPet
+comment6.target=void\ setMyPet(Pet)
+comment6.text=\n\ @param\ myPet\ the\ myPet\ to\ set\n
+comment7.params=
+comment7.target=java.lang.String\ getName()
+comment7.text=\n\ @return\ the\ name\n
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

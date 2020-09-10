@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Store
+comment0.text=\n\ This\ allows\ users\ to\ see\ our\ books/beverages\ and\ buy\ them\n\n\ @author\ Enzo\ Coglitore\n\ ITP\ 265,\ Term\ Year\ (Fall\ 2020),\ Class\ Session\ (Coffee)\n\ Assignment\ 02\n\ Email\:\ ecoglito@usc.edu\n
+comment1.params=
+comment1.target=Store()
+comment10.params=
+comment10.target=void\ shop()
+comment11.params=args
+comment11.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=void\ makeUser()
+comment3.params=
+comment3.target=void\ printInventory()
+comment4.params=prompt\ min\ max
+comment4.target=int\ bookInputRangeChecker(java.lang.String,\ int,\ int)
+comment5.params=prompt
+comment5.target=int\ bookInputIntChecker(java.lang.String)
+comment6.params=userBookChoice
+comment6.target=java.lang.String\ bookChecker(int)
+comment7.params=prompt\ min\ max
+comment7.target=int\ beverageInputRangeChecker(java.lang.String,\ int,\ int)
+comment8.params=prompt
+comment8.target=int\ beverageInputIntChecker(java.lang.String)
+comment9.params=userBeverageChoice
+comment9.target=java.lang.String\ beverageChecker(int)
+numComments=12

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=CreditCard
+comment0.text=\n\ This\ allows\ a\ user\ to\ purchase\ things\ with\ their\ credit\ card.\n\n\ @author\ Enzo\ Coglitore\n\ ITP\ 265,\ Term\ Year\ (Fall\ 2020),\ Class\ Session\ (Coffee)\n\ Assignment\ 03\n\ Email\:\ ecoglito@usc.edu\n
+comment1.params=name\ zipCode\ number\ expirationDate\ securityCode\ Balance
+comment1.target=CreditCard(java.lang.String,\ int,\ java.lang.String,\ java.lang.String,\ int,\ double)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=name
+comment3.target=void\ setName(java.lang.String)
+comment4.params=
+comment4.target=double\ getBalance()
+comment5.params=Balance
+comment5.target=void\ setBalance(double)
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
