@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Category
+comment0.text=\r\nCategory\ Enum\ Initialization\r\nEnzo\ Coglitore\r\nITP265\r\nEcoglito@usc.edu\r\n
+comment1.params=description
+comment1.target=Category(java.lang.String)
+comment2.params=description
+comment2.target=Category\ getCategoryFromDescription(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getDescription()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=num
+comment5.target=Category\ getCategoryByNum(int)
+comment6.params=
+comment6.target=void\ getCategoryOptions()
+comment7.params=
+comment7.target=int\ getNumOptions()
+comment7.text=\r\n\ \ \ \ public\ static\ void\ printCategory(){\r\n\ \ \ \ for(int\ i\ \=\ 0;\ i\ <\ Category.values().length;\ i++){\r\n\ \ \ \ System.out.println((i+1)\ +\ "."\ +\ Category.values()[i]\ +\ "\:"\ +\ Category.values()[i].getDescription()\ );\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n
+numComments=8
