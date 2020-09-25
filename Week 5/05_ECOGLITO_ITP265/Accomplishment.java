@@ -51,7 +51,5 @@ public class Accomplishment
     + ", Category: " + category;
     }
     
-    public void() {
-    AccomplishmentProgram
-    }
+   
 }

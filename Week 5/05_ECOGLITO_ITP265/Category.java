@@ -7,7 +7,7 @@
  */
 public enum Category
 {
-    SOCIAL("Social & Jobs"), 
+    SOCIAL("Social & Jobs"),
     ARTS("Arts & Entertainment"), 
     RELIGION("Religion"), 
     MILITARY("Military"), 
@@ -18,9 +18,11 @@ public enum Category
     NONE("N/A");
     
     private String description;
+
     
     private Category(String description){
         this.description = description;
+
     }
     
     public static Category getCategoryFromDescription(String description){
@@ -50,23 +52,22 @@ public enum Category
     }
     
     public static void getCategoryOptions(){
-    for (Category list : Category.values()) {
-    System.out.println(list + ": " + list.getDescription());
-    }
+    for(int i = 1; i < Category.values().length; i++){
+            String x = Category.values()[i-1].description;
+            System.out.println(i + ":" + x);
+        }
     }
     
+ 
     
-    /*
-    public static void printCategory(){
-    for(int i = 0; i < Category.values().length; i++){
-    System.out.println((i+1) + "." + Category.values()[i] + ":" + Category.values()[i].getDescription() );
-    }
-    }
-    */
-   
+
+    
+        
     public static int getNumOptions(){
     return Category.values().length;
     }
+    
+    
     
     
 
