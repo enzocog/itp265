@@ -1,12 +1,12 @@
 
 /**
- * Writes about accomplishments of african-americans.
+ * Writes about accomplishments of african-americans. Class that we can call in accomplishment program
  *
  * Enzo Coglitore
  * ITP265
  * ecoglito@usc.edu
  */
-public class Accomplishment
+public class Accomplishment //makeing the class
 {
     
     private int year;
@@ -15,14 +15,14 @@ public class Accomplishment
     private boolean isFemale;
     private Category category;
     
-    public Accomplishment(int year, String accomplishment, String person, boolean isFemale, Category category){
+    public Accomplishment(int year, String accomplishment, String person, boolean isFemale, Category category){ //constructor
         this.year = year;
         this.accomplishment = accomplishment;
         this.person = person;
         this.isFemale = isFemale;
         this.category = category;
     }
-    
+    //various accessors + mutators
     public int getYear() {
         return year;
     }

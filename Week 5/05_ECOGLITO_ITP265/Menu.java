@@ -1,10 +1,9 @@
 
 /**
- * Menu Enum
+ * Menu Enum, helps us navigate accomplishment program
  *
- * @Enzo Coglitore
- * ITP 265 , Ecoglito@usc.edu
- * @version (a version number or a date)
+ ** Enzo Coglitore
+ * ITP 265, Coffee, Ecoglito@usc.edu
  */
 public enum Menu
 {
@@ -24,7 +23,7 @@ public enum Menu
      public static void print(){
         for(int i = 1; i < Menu.values().length+1; i++){
             String x = Menu.values()[i-1].description;
-            System.out.println(i + ":" + x);
+            System.out.println(i + ": " + x);
         }
         
         }

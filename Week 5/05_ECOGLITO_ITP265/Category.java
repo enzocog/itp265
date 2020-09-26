@@ -1,11 +1,11 @@
 
 /**
- *Category Enum Initialization
+ *Category Enum Initialization. Helps us with sorting.
  *Enzo Coglitore
  *ITP265
  *Ecoglito@usc.edu
  */
-public enum Category
+public enum Category //init category enum
 {
     SOCIAL("Social & Jobs"),
     ARTS("Arts & Entertainment"), 
@@ -20,12 +20,12 @@ public enum Category
     private String description;
 
     
-    private Category(String description){
+    private Category(String description){ //consturctor
         this.description = description;
 
     }
-    
-    public static Category getCategoryFromDescription(String description){
+    //various mutators + accessors
+    public static Category getCategoryFromDescription(String description){ //print the category from description
         Category c = Category.NONE; //default
         
         for(int i = 0; i < Category.values().length; i++){

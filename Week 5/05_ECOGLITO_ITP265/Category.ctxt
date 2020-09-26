@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Category
-comment0.text=\nCategory\ Enum\ Initialization\nEnzo\ Coglitore\nITP265\nEcoglito@usc.edu\n
+comment0.text=\r\nCategory\ Enum\ Initialization\r\nEnzo\ Coglitore\r\nITP265\r\nEcoglito@usc.edu\r\n
 comment1.params=description
 comment1.target=Category(java.lang.String)
 comment2.params=description
