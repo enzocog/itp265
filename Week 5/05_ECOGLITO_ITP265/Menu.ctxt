@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Menu
-comment0.text=\r\n\ Menu\ Enum\r\n\r\n\ @Enzo\ Coglitore\r\n\ ITP\ 265\ ,\ Ecoglito@usc.edu\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Menu\ Enum,\ helps\ us\ navigate\ accomplishment\ program\r\n\r\n\ Enzo\ Coglitore\r\n\ ITP\ 265,\ Coffee,\ Ecoglito@usc.edu\r\n
 comment1.params=description
 comment1.target=Menu(java.lang.String)
 comment2.params=

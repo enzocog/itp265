@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=LetterGrade
+comment0.text=\r\n\ Enumeration\ class\ LetterGrade\ -\ write\ a\ description\ of\ the\ enum\ class\ here\r\n\r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ number\ or\ date\ here)\r\n
+comment1.params=gpaAVG
+comment1.target=LetterGrade(double)
+comment2.params=
+comment2.target=double\ getGpaAvg()
+comment3.params=
+comment3.target=void\ getLetterGPA()
+comment4.params=
+comment4.target=void\ print()
+comment5.params=num
+comment5.target=LetterGrade\ getLetterGrade(int)
+numComments=6

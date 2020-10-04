@@ -14,35 +14,35 @@ public class AccomplishmentProgram { //init data
   private static final int DEFAULT_SIZE = 479;
   private int numSlotsFilled;
 
-  
   public AccomplishmentProgram(){ //define + init class vars
     sc = new UI();
     database = new Accomplishment[DEFAULT_SIZE];
-
     numSlotsFilled = 0;
     }
+    
   public void displayWelcome() { //welcome
-        String intro = "This data is from Kaggle's Tidy Tuesday Week 24 and comes from Wikipedia. It is a celebration of "
-                +"Black Lives,\n\ttheir achievements, and many of their battles against racism across their lives."
-                + "\n\tThis is in emphasis that Black Lives Matter and we're focusing on a celebration of these lives. ";
+    String intro = "This data is from Kaggle's Tidy Tuesday Week 24 and comes from Wikipedia. It is a celebration of "
+            +"Black Lives,\n\ttheir achievements, and many of their battles against racism across their lives."
+            + "\n\tThis is in emphasis that Black Lives Matter and we're focusing on a celebration of these lives. ";
 
-        String info = "The firsts.csv dataset has 479 records of African-Americans breaking the color "
-                +"barrier across a \n\twide range of topics. The raw text has been adapted from Wikipedia to "
-                + " highlight:\n\t** The year of the event\n\t** The role/action/topic"
-                + "\n\t** The person or people involved\n\t** Addition of gender\n\t** A category of topics";
-        
-        //NOTE: the gender data does not all look to be correct in this data set.
-        
-        String citation = "Original data set can be found here: https://www.kaggle.com/jessemostipak/african-american-achievements/";
+    String info = "The firsts.csv dataset has 479 records of African-Americans breaking the color "
+            +"barrier across a \n\twide range of topics. The raw text has been adapted from Wikipedia to "
+            + " highlight:\n\t** The year of the event\n\t** The role/action/topic"
+            + "\n\t** The person or people involved\n\t** Addition of gender\n\t** A category of topics";
+    
+    //NOTE: the gender data does not all look to be correct in this data set.
+    
+    String citation = "Original data set can be found here: https://www.kaggle.com/jessemostipak/african-american-achievements/";
 
-	System.out.println("INTRO: \n\t" + intro + "\n\nINFO: \n\t" + info + "\n\n" + citation);
-	}
-    	
+    System.out.println("INTRO: \n\t" + intro + "\n\nINFO: \n\t" + info + "\n\n" + citation);
+    }
+        
   public void run() { //run menu
+    readDataFromFile(fileName);
     Menu choice; 
 
     do{
-        System.out.println("*****	Menu	*****");
+        System.out.println("*****   Menu    *****");
         Menu.print();
         System.out.println("**********************************************");
         int num = sc.inputInt("Choose > ", 0, Menu.getNumberOfMenuItems());
@@ -60,7 +60,7 @@ public class AccomplishmentProgram { //init data
     }
     
     while(choice != Menu.QUIT);
-    }
+   }
 
 
   public static void main(String[] args) { //main run program
@@ -83,44 +83,42 @@ public class AccomplishmentProgram { //init data
         String gender = entryScanner.next();
         Boolean genderCheck = false;
         if (gender.contains("Female")){
-        genderCheck = true;
+            genderCheck = true;
         }
         String category = entryScanner.next();
-        
         Category cat = Category.getCategoryFromDescription(category);
         Accomplishment c = new Accomplishment(year, accomplishment, person, genderCheck, cat);
         boolean added = addData(c);
-    
-        
     }
-}
-    private boolean addData(Accomplishment c){ //add the data to list if its not full
-        boolean addedData = false;
-        if(numSlotsFilled < database.length) {
+  }
+  
+  private boolean addData(Accomplishment c){ //add the data to list if its not full
+      boolean addedData = false;
+      if(numSlotsFilled < database.length) {
         database[numSlotsFilled] = c;
         numSlotsFilled++;
         addedData = true;
         }
         return addedData;
-    }
+  }
     
+  
     
-    
-    
-   public void printFacts(){ //print all facts
-    readDataFromFile(fileName);
-    for (int i = 0; i < database.length; i++) {
-    System.out.println(database[i]);
-    }
-    }
+  public void printFacts(){ //print all facts
 
-   public void playQuiz(){ //play a simple quiz
+    for (int i = 0; i < database.length; i++) {
+        System.out.println(database[i]);
+    }
+  }
+
+  public void playQuiz(){ //play a simple quiz
     int score = 0;
-    readDataFromFile(fileName);
+    
     Random objGenerator = new Random();
     for (int i = 0; i< 10; i++){
               int randomNumber = objGenerator.nextInt(DEFAULT_SIZE);
               int x = sc.inputInt( "In what year did " + database[randomNumber].getPerson() + " become the " + database[randomNumber].getAccomplishment()+ "? (5 year range)", 1738, 2019);
+              System.out.println(x);
               if ((database[randomNumber].getYear() - x) <= 5 && (x - database[randomNumber].getYear()) >= -5) {
                  score = score + 1;
                  System.out.println("That was correct!");
@@ -132,21 +130,21 @@ public class AccomplishmentProgram { //init data
                 System.out.println("Your score is now: " + score);
                 }
     System.out.println("Thanks for playing! Your final score was: " + score);
-    }
+   }
     
     
-    public void printFemale(){ //print out females
-    readDataFromFile(fileName);
+  public void printFemale(){ //print out females
+
     for (int i = 0; i < database.length; i++){
         if (database[i].isFemale()){
             System.out.println(database[i]);
         }
        
     }
-    }
+  }
     
-    public void printMale(){ //print males
-    readDataFromFile(fileName);
+  public void printMale(){ //print males
+
     for (int i = 0; i < database.length; i++){
         if (!database[i].isFemale()){
             System.out.println(database[i]);
@@ -154,26 +152,25 @@ public class AccomplishmentProgram { //init data
        
     }
     
-    }
+  }
     
-    public void printCategory(){ //print out the categories
-    readDataFromFile(fileName);
-    Category.getCategoryOptions();
+  public void printCategory(){ //print out the categories
 
+    Category.getCategoryOptions();
     int userInput = sc.inputInt("Which category would you like to see?", 1, 8);
     switch(userInput){
-    case 1: printCertainCategory("Social & Jobs"); break;
-    case 2: printCertainCategory("Arts & Entertainment"); break;
-    case 3: printCertainCategory("Religion"); break;
-    case 4: printCertainCategory("Military"); break;
-    case 5: printCertainCategory("Education & Science"); break;
-    case 6: printCertainCategory("Law"); break;
-    case 7: printCertainCategory("Politics"); break;
-    case 8: printCertainCategory("Sports"); break;
+        case 1: printCertainCategory("Social & Jobs"); break;
+        case 2: printCertainCategory("Arts & Entertainment"); break;
+        case 3: printCertainCategory("Religion"); break;
+        case 4: printCertainCategory("Military"); break;
+        case 5: printCertainCategory("Education & Science"); break;
+        case 6: printCertainCategory("Law"); break;
+        case 7: printCertainCategory("Politics"); break;
+        case 8: printCertainCategory("Sports"); break;
     }
-    }
+  }
    
-    public void printCertainCategory(String x){ //print a certain category
+  public void printCertainCategory(String x){ //print a certain category
     for (int i = 0; i < database.length; i++){
         if (database[i].getCategory().toString().contains(x)){
             System.out.println(database[i]);
