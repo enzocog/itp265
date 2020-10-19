@@ -23,20 +23,17 @@ public class Video extends StreamableProduct implements Rentable {
 	
 	@Override
 	public String toString() {
-		return "Video: " + super.toString() + " Genre: " + genres;
+		return "Video: " + super.toString() + " Genre: " + genres +", Rental Price: " + getRentalPrice();
 	}
 	
 	public double getRentalPrice() {
 		if (isIncludedWithPrime()) {
 			return 0;
 		}
-		return getPrice() / 3;
+		return this.getPrice() / 3;
 	}
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
+	
 	
 	
 }

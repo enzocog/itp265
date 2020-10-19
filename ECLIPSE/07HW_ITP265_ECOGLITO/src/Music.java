@@ -12,20 +12,12 @@
 public class Music extends StreamableProduct {
 	//init var
 	private MusicGenre genres;
-	
 	public Music(String name, double price, double rating, double duration, boolean isIncludedWithPrime, int releaseYear, MusicGenre genres) { //constructor
 		super(name, price, rating, duration, isIncludedWithPrime, releaseYear);
 		this.genres = genres;
 	}
 
 
-
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 	
 
 	/**
@@ -54,4 +46,10 @@ public class Music extends StreamableProduct {
 				+ ", Rating: " + getRating() + 
 				 ", Price: " + getPrice();
 	}
+
+
+
+
+
+	
 }

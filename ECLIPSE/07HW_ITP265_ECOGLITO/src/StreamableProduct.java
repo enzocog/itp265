@@ -52,7 +52,7 @@ public abstract class StreamableProduct extends Product {
 
 	@Override
 	public String toString() {
-		return "Name:" + getName() + ", Price: " + getPrice() + "Rating: " + getRating() + ", duration: " + duration + "isIncludedWithPrime:" + isIncludedWithPrime + "releaseYear: " + releaseYear;
+		return "Name:" + getName() + ", Price: " + getPrice() + ", Rating: " + getRating() + ", Duration: " + duration + ", Prime:" + isIncludedWithPrime + ", releaseYear: " + releaseYear;
 	}
 	
 	

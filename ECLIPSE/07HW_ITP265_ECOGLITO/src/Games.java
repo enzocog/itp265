@@ -36,12 +36,7 @@ public class Games extends Item {
 		return "Games: Name: " + getName() + ", Price: " + getPrice() + ", Rating: " + getRating() + ", Quantity: " + getQuantity() + ", Description: " + getDescription();	
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+	
 
 	
 	

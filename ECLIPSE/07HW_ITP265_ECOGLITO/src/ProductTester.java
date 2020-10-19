@@ -26,18 +26,17 @@ public class ProductTester {
 		store.printProductPriceAndName();
 		System.out.println("\nMETHOD 2 -- All products in the store, sorted by price");
 		store.showItemsByPrice();
-
 		System.out.println("\nMETHOD 3 --Inventory in the store by Product Type");
 		store.showInventoryByCategory();
 		System.out.println("\nMETHOD 4 --Rentable items:");
 		store.showRentals();
 
 		System.out.println("\nMETHOD 5 --All items (full to String)");
-		store.showAll(); // this should really be the first thing the students do.
+		store.showAll();
 
 	}
 
-	public void printProductPriceAndName() {
+	public void printProductPriceAndName() { //prints out price + name
 		System.out.println("Implement method");
 		//TODO -- can use friendly to help get the price of a given product p in a user-friendly format
 		//String friendly = String.format("$%.2f", p.getPrice());
@@ -47,21 +46,16 @@ public class ProductTester {
 		}
 	}
 
-	public void showInventoryByCategory() {
-		//productList.getCategoryOptions();
-		for (int i = 0; i < productList.values().length; i++) {
-			System.out.println(getCategoryList(productList));
+	public void showInventoryByCategory() { //prints out by category
+		for (int i = 0; i < ProductType.values().length; i++) {
+			List<Product> test = getCategoryList(ProductType.getProductNumberedInt(i));
+			for (int j = 0; j < test.size(); j++) {
+				System.out.println(test.get(j));
+			}
 		}
-		// Loop through enum of all ProductTypes 
-		// Use private helper method getCategoryList to return a list of Products matching that type
-
-		// if there are no Products of the given type in the list, print "\tNo matching items"
-		// otherwise print the list contents, one per line with a tab followed by the product's toString result
-
-		//TODO
 	}
 
-	private ArrayList<Product> getCategoryList(ProductType type) {
+	private ArrayList<Product> getCategoryList(ProductType type) { //helper method
 		ArrayList<Product> items = new ArrayList<>();
 		for(Product p: allProducts) {
 			if(p.getClass().getSimpleName().equalsIgnoreCase(type.toString())){
@@ -72,27 +66,26 @@ public class ProductTester {
 	}
 
 
-	private void showItemsByPrice() {
+	private void showItemsByPrice() { //sort by price
 		System.out.println("Implement method");
 		Collections.sort(allProducts);
 		for(int i = 0; i < allProducts.size(); i++){
-	        System.out.println("Product: " + allProducts.get(i).getName() + " Price: " + allProducts.get(i).getPrice());
-	    }	//TODO
+			System.out.println(allProducts.get(i).getName() + " " + String.format("$%.2f", allProducts.get(i).getPrice()));
+	    }	
 	}
 
 
-	private void showRentals() {
-		System.out.println("Implement method");
+	private void showRentals() { //show all rentals
 		for (int i = 0; i < allProducts.size(); i++) {
-			if (allProducts.get(i))
-			
+			if (allProducts.get(i).toString().contains("Rental Price")) {
+				System.out.println(allProducts.get(i).toString());
+			}
 			
 		}
-		//TODO
+	
 	}
 	
-	private void showAll() {
-		System.out.println("Implement method");
+	private void showAll() { //show all
 		for (int i = 0; i < allProducts.size(); i++ ) {
 			System.out.println(allProducts.get(i).toString());
 		}

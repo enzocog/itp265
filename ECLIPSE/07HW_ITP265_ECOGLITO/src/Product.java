@@ -9,7 +9,7 @@ import java.lang.Comparable;
  * Ecoglito@usc.edu
  *
  */
-public abstract class Product implements Comparable<Object> { 
+public abstract class Product implements Comparable<Product> { 
 	//init variables
 	private String name;
 	private double price;
@@ -45,11 +45,11 @@ public abstract class Product implements Comparable<Object> {
 
 	@Override
 	public String toString() {
-		return name + ", price:" + String.format("%.2f", price) + ", rating" + rating;
+		return "Name: " + name + ", price: " + String.format("%.2f", price) + ", rating " + rating;
 	}
 	
-	
-	public int compareTo(Product x) {
+	 
+	public int compareTo(Product x) { //compare by price
 		double diff = this.getPrice() - x.getPrice();
 		if (Math.abs(diff) <= .0001) {
 			return 0;
@@ -63,6 +63,7 @@ public abstract class Product implements Comparable<Object> {
 	
 	}
 	
+
 	
 	
 	 public boolean equals(Object obj) 
@@ -83,8 +84,9 @@ public abstract class Product implements Comparable<Object> {
 	        // comparing the state of argument with  
 	        // the state of 'this' Object. 
 	        return (product.name == this.name && product.price == this.price && product.rating == this.rating); 
-	    } 
-	
-	
-	
+	    }
+
+
+
+
 }

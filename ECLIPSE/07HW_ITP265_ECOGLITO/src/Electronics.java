@@ -41,12 +41,7 @@ public class Electronics extends Item {
 	public String toString() {
 		return "Electronics: Name: " + getName() + ", Price: " + getPrice() + ", Rating: " + getRating() + ", Quantity: " + getQuantity() + ", Size: " + getSize() + ", Weight: " + getWeight();	
 	}
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
+
 	
 	
 	

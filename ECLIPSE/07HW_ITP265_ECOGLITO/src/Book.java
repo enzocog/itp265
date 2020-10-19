@@ -8,7 +8,7 @@
  * Ecoglito@usc.edu
  *
  */
-public class Book extends Item implements Rentable {
+public class Book extends Item implements Rentable{
 	// init variables
 	private String genre;
 	private int numberOfPages;
@@ -36,18 +36,13 @@ public class Book extends Item implements Rentable {
 	
 	@Override
 	public String toString() {
-		return "Book:" + super.toString() + ". Genre" + genre + ", number of pages: " + numberOfPages;
+		return "Book: " + super.toString() + ", Genre: " + genre + ", number of pages: " + numberOfPages + ", Rental Price: " + getRentalPrice();
 	}
 
 	public static double getRentalPrice() {
 		return RENTAL_PRICE;
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }
 

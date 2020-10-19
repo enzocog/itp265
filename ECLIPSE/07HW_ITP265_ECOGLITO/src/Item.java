@@ -32,7 +32,7 @@ public abstract class Item extends Product {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", quantity" + quantity;
+		return super.toString() + ", quantity " + quantity;
 	}
 	
 	

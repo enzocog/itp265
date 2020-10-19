@@ -18,7 +18,7 @@ public enum ProductType {
 	APPLIANCES;
 	
 	
-	public void getCategoryOptions(){
+	public static void getCategoryOptions(){
 	    for(int i = 1; i < ProductType.values().length; i++){
 	            String x = ProductType.values()[i-1].toString();
 	            System.out.println(i + ":" + x);
