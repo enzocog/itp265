@@ -28,6 +28,22 @@ public class StoreFactory {
 	 * @param productFile
 	 * @return
 	 */
+	 public static void main(String[] args) {
+		 test();
+	    }
+	 
+	public static void test() {
+	       List<Product> allProducts = new ArrayList<>();
+	       readFile(PRODUCT_FILE, allProducts);
+	       readFile(STREAMABLE_FILE, allProducts);
+	       
+	       for (int i = 0; i < allProducts.size(); i++) {
+	        System.out.println(allProducts.get(i));
+	        }
+	       
+	       }
+	
+	
 	private static void readFile(String file, List<Product> list) {
 		try(FileInputStream fis = new FileInputStream(file);
 				Scanner scan = new Scanner(fis))

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Rentable
+comment0.text=\r\n\ \r\n\ \r\n\ @author\ This\ is\ the\ renteable\ interface\r\n\ Enzo\ Coglitore\r\n\ ITP\ 265,\ Coffee\r\n\ HW\ 07\r\n\ Ecoglito@usc.edu\r\n\r\n
+comment1.params=
+comment1.target=void\ getRentalPrice()
+numComments=2

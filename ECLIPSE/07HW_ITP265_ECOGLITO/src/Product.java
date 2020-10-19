@@ -15,7 +15,11 @@ public abstract class Product implements Comparable<Object> {
 	private double price;
 	private double rating;
 	
-
+	public Product(String name, double price, double rating) {
+		this.name = name;
+		this.price = price;
+		this.rating = rating;
+	}
 		
 	
 	//getter and setters
@@ -41,7 +45,7 @@ public abstract class Product implements Comparable<Object> {
 
 	@Override
 	public String toString() {
-		return "Product [name=" + name + ", price=" + price + ", rating=" + rating + "]";
+		return name + ", price:" + String.format("%.2f", price) + ", rating" + rating;
 	}
 	
 	
@@ -58,6 +62,7 @@ public abstract class Product implements Comparable<Object> {
 		}
 	
 	}
+	
 	
 	
 	 public boolean equals(Object obj) 

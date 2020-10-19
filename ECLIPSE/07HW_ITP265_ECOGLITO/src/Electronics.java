@@ -14,7 +14,7 @@ public class Electronics extends Item {
 	private String weight;
 
 	public Electronics(String name, double price, double rating, int quantity, String size, String weight) { //constructor
-		super();
+		super(name, price, rating, quantity);
 		this.size = size;
 		this.weight = weight;
 		// TODO Auto-generated constructor stub
@@ -36,9 +36,10 @@ public class Electronics extends Item {
 		this.weight = weight;
 	}
 
+	
 	@Override
 	public String toString() {
-		return "Electronics [size=" + size + ", weight=" + weight + "]";
+		return "Electronics: Name: " + getName() + ", Price: " + getPrice() + ", Rating: " + getRating() + ", Quantity: " + getQuantity() + ", Size: " + getSize() + ", Weight: " + getWeight();	
 	}
 	@Override
 	public int compareTo(Object o) {

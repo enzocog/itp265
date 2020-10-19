@@ -14,7 +14,7 @@ public class Games extends Item {
 	
 
 	public Games(String name, double price, double rating, int quantity, String description) { //constructor
-		super();
+		super(name, price, rating, quantity);
 		this.description = description;
 		// TODO Auto-generated constructor stub
 	}
@@ -33,7 +33,7 @@ public class Games extends Item {
 
 	@Override
 	public String toString() {
-		return "Games [description=" + description + "]";
+		return "Games: Name: " + getName() + ", Price: " + getPrice() + ", Rating: " + getRating() + ", Quantity: " + getQuantity() + ", Description: " + getDescription();	
 	}
 
 	@Override

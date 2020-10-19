@@ -13,20 +13,11 @@ public class Music extends StreamableProduct {
 	//init var
 	private MusicGenre genres;
 	
-	
 	public Music(String name, double price, double rating, double duration, boolean isIncludedWithPrime, int releaseYear, MusicGenre genres) { //constructor
-		super();
+		super(name, price, rating, duration, isIncludedWithPrime, releaseYear);
 		this.genres = genres;
 	}
 
-
-	@Override
-	public String toString() {
-		return "Music [genres=" + genres + ", getDuration()=" + getDuration() + ", isIncludedWithPrime()="
-				+ isIncludedWithPrime() + ", getReleaseYear()=" + getReleaseYear() + ", toString()=" + super.toString()
-				+ ", getRating()=" + getRating() + ", getName()=" + getName() + ", getPrice()=" + getPrice()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
-	}
 
 
 	@Override
@@ -36,4 +27,31 @@ public class Music extends StreamableProduct {
 	}
 	
 	
+
+	/**
+	 * @return the genres
+	 */
+	public MusicGenre getGenres() {
+		return genres;
+	}
+
+
+
+	/**
+	 * @param genres the genres to set
+	 */
+	public void setGenres(MusicGenre genres) {
+		this.genres = genres;
+	}
+
+
+
+	@Override
+
+	public String toString() {
+		return "Music: Name:" + getName() + ", Genre:" + getGenres() + ", Duration: " + getDuration()
+				+ ", Prime?: " + isIncludedWithPrime() + ", Release Year: " + getReleaseYear()
+				+ ", Rating: " + getRating() + 
+				 ", Price: " + getPrice();
+	}
 }

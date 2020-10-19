@@ -16,7 +16,7 @@ public class Book extends Item implements Rentable {
 
 	
 	public Book(String name, double price, double rating, int quantity, String genre, int numberOfPages) { //constructor
-		super();
+		super(name, price, rating, quantity);
 		this.genre = genre;
 		this.numberOfPages = numberOfPages;
 	}
@@ -32,20 +32,11 @@ public class Book extends Item implements Rentable {
 		return numberOfPages;
 	}
 
-	public double getRENTAL_PRICE() {
-		return RENTAL_PRICE;
-	}
-
-	
 	
 	
 	@Override
 	public String toString() {
-		return "Book [genre=" + genre + ", numberOfPages=" + numberOfPages + ", getGenre()=" + getGenre()
-				+ ", getNumberOfPages()=" + getNumberOfPages() + ", getRENTAL_PRICE()=" + getRENTAL_PRICE()
-				+ ", getQuantity()=" + getQuantity() + ", getRating()=" + getRating() + ", getName()=" + getName()
-				+ ", getPrice()=" + getPrice() + ", toString()=" + super.toString() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + "]";
+		return "Book:" + super.toString() + ". Genre" + genre + ", number of pages: " + numberOfPages;
 	}
 
 	public static double getRentalPrice() {

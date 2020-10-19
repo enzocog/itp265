@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=StreamableProduct
+comment0.text=\r\n\ \r\n\ \r\n\ @author\ This\ is\ a\ base\ streamable\ product\ class\r\n\ Enzo\ Coglitore\r\n\ ITP\ 265,\ Coffee\r\n\ HW\ 07\r\n\ Ecoglito@usc.edu\r\n
+comment1.params=
+comment1.target=double\ getDuration()
+comment2.params=duration
+comment2.target=void\ setDuration(double)
+comment3.params=
+comment3.target=boolean\ isIncludedWithPrime()
+comment4.params=isIncludedWithPrime
+comment4.target=void\ setIncludedWithPrime(boolean)
+comment5.params=
+comment5.target=int\ getReleaseYear()
+comment6.params=releaseYear
+comment6.target=void\ setReleaseYear(int)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

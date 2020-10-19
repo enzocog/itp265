@@ -11,7 +11,7 @@
 public class Video extends StreamableProduct implements Rentable {
 	private Genre genres;
 	public Video(String name, double price, double rating, double duration, boolean isIncludedWithPrime, int releaseYear, Genre genres) { //constructor
-		super();
+		super(name, price, rating, duration, isIncludedWithPrime, releaseYear);
 		this.genres = genres;
 	}
 	public Genre getGenres() {
@@ -23,10 +23,7 @@ public class Video extends StreamableProduct implements Rentable {
 	
 	@Override
 	public String toString() {
-		return "Vide o [genres=" + genres + ", getGenres()=" + getGenres() + ", getDuration()=" + getDuration()
-				+ ", isIncludedWithPrime()=" + isIncludedWithPrime() + ", getReleaseYear()=" + getReleaseYear()
-				+ ", toString()=" + super.toString() + ", getRating()=" + getRating() + ", getName()=" + getName()
-				+ ", getPrice()=" + getPrice() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+		return "Video: " + super.toString() + " Genre: " + genres;
 	}
 	
 	public double getRentalPrice() {

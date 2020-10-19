@@ -9,11 +9,20 @@
  */ 
 public abstract class StreamableProduct extends Product {
 	
+	
+
 	//init variables
 	private double duration;
 	private boolean isIncludedWithPrime;
 	private int releaseYear;
-
+	
+	public StreamableProduct(String name, double price, double rating, double duration, boolean isIncludedWithPrime, int releaseYear) {
+		super(name, price, rating);
+		this.duration = duration;
+		this.isIncludedWithPrime = isIncludedWithPrime;
+		this.releaseYear = releaseYear;
+		// TODO Auto-generated constructor stub
+	}
 	
 	//getters and setters
 	
@@ -43,8 +52,7 @@ public abstract class StreamableProduct extends Product {
 
 	@Override
 	public String toString() {
-		return "StreamableProduct [duration=" + duration + ", isIncludedWithPrime=" + isIncludedWithPrime
-				+ ", releaseYear=" + releaseYear + "]";
+		return "Name:" + getName() + ", Price: " + getPrice() + "Rating: " + getRating() + ", duration: " + duration + "isIncludedWithPrime:" + isIncludedWithPrime + "releaseYear: " + releaseYear;
 	}
 	
 	

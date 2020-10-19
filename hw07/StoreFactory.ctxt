@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=StoreFactory
+comment1.params=
+comment1.target=java.util.List\ setUpStoreProducts()
+comment2.params=
+comment2.target=void\ test()
+comment3.params=file\ list
+comment3.target=void\ readFile(java.lang.String,\ java.util.List)
+comment3.text=\r\n\ @param\ productFile\r\n\ @return\r\n
+comment4.params=line
+comment4.target=Product\ parseStringIntoProduct(java.lang.String)
+comment4.text=\r\n\ @param\ line\r\n\ @return\r\n
+comment5.params=line
+comment5.target=StreamableProduct\ parseStreamable(java.lang.String)
+comment6.params=otherData
+comment6.target=Genre\ parseVideoGenre(java.lang.String)
+comment6.text=\r\n\ @param\ otherData\r\n\ @return\r\n
+comment7.params=otherData
+comment7.target=MusicGenre\ parseMusicGenre(java.lang.String)
+comment7.text=\r\n\ @param\ otherData\r\n\ @return\r\n
+comment8.params=line
+comment8.target=Item\ parseItem(java.lang.String)
+comment8.text=\r\n\ @param\ nextLine\r\n\ @return\r\n
+numComments=9

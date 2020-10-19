@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Music
+comment0.text=\ \r\n\ \r\n\ @author\ This\ is\ an\ music\ class\r\n\ Enzo\ Coglitore\r\n\ ITP\ 265,\ Coffee\r\n\ HW\ 07\r\n\ Ecoglito@usc.edu\r\n\r\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=o
+comment2.target=int\ compareTo(java.lang.Object)
+numComments=3

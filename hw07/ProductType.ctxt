@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=ProductType
+comment0.text=\r\n\ \r\n\ \r\n\ @author\ This\ is\ the\ product\ type\ enum\r\n\ Enzo\ Coglitore\r\n\ ITP\ 265,\ Coffee\r\n\ HW\ 07\r\n\ Ecoglito@usc.edu\r\n\r\n
+comment1.params=
+comment1.target=void\ getCategoryOptions()
+comment2.params=num
+comment2.target=ProductType\ getProductNumberedInt(int)
+numComments=3

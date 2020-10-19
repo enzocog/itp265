@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Book
+comment0.text=\r\n\ \r\n\ \r\n\ @author\ This\ is\ an\ Books\ class\r\n\ Enzo\ Coglitore\r\n\ ITP\ 265,\ Coffee\r\n\ HW\ 07\r\n\ Ecoglito@usc.edu\r\n\r\n
+comment1.params=name\ price\ rating\ quantity\ genre\ numberOfPages
+comment1.target=Book(java.lang.String,\ double,\ double,\ int,\ java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getGenre()
+comment3.params=
+comment3.target=int\ getNumberOfPages()
+comment4.params=
+comment4.target=double\ getRENTAL_PRICE()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment6.params=
+comment6.target=double\ getRentalPrice()
+comment7.params=o
+comment7.target=int\ compareTo(java.lang.Object)
+numComments=8
