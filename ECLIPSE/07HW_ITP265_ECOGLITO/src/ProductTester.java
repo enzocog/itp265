@@ -75,14 +75,15 @@ public class ProductTester {
 	}
 
 
-	private void showRentals() { //show all rentals
-		for (int i = 0; i < allProducts.size(); i++) {
-			if (allProducts.get(i).toString().contains("Rental Price")) {
-				System.out.println(allProducts.get(i).toString());
+	private void showRentals() {
+
+		for (Product p: allProducts) {
+			if(p instanceof Rentable) {
+				Rentable r = (Rentable) p;
+				System.out.println( p.getName() + ": " +  String.format("$%.2f", r.getRentalPrice()));
 			}
-			
 		}
-	
+		
 	}
 	
 	private void showAll() { //show all

@@ -39,7 +39,7 @@ public class Book extends Item implements Rentable{
 		return "Book: " + super.toString() + ", Genre: " + genre + ", number of pages: " + numberOfPages + ", Rental Price: " + getRentalPrice();
 	}
 
-	public static double getRentalPrice() {
+	public double getRentalPrice() {
 		return RENTAL_PRICE;
 	}
 

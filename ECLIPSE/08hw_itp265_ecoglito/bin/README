@@ -1,0 +1,13 @@
+1. This assignment helped reinforce what I had felt comfortable with in HW 07. Initially the topic of inheritance was hard, but I can see why it is done. It helps with working with many different types of classes, while still requiring a base class. I don't have any remaining questions besides some of the implementation of interfaces, but I figured we will cover that soon.
+
+2. The most complicated methods were to check for the password and to create a new user. This is because they were significantly longer than the other methods and required to truly understand how the HashMap works + the inehritance of a Person class to input new data / check for the password.
+
+3. The easiest methods were the ones that were built in, such as containsKey or containsValue.
+
+4. No questions.
+
+5. No questions.
+
+6. Maps and Lists are similar in the fact that they can hold unique types of data. In particular, I noticed that HashMaps can hold lists, which makes them very powerful. The fact that the values of our HashMap were an ArrayList means that we can do a lot more data manipulation/input through a map. They are different in the way that the data is paired with its values, as ArrayList seems faster but more restricting, and HashMaps need those unique key+value pairing.
+
+7. You would want to use a HashMap when you don't need to access an index in a certain order. Instead of a store catalogue that is numbered, you can just have keys + values in the store, so that way you don't have to remember the index of the items in the store.

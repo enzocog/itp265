@@ -50,6 +50,34 @@ public class Music extends StreamableProduct {
 
 
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((genres == null) ? 0 : genres.hashCode());
+		return result;
+	}
+
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (!(obj instanceof Music))
+			return false;
+		Music other = (Music) obj;
+		if (genres != other.genres)
+			return false;
+		return true;
+	}
+
+	
+
+
 
 	
 }

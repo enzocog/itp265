@@ -9,7 +9,5 @@
  *
  */
 public interface Rentable {
-	
-	public static void getRentalPrice() {
-	}
+	public double getRentalPrice();
 }

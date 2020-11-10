@@ -1,0 +1,116 @@
+Welcome to EVITE! We are super excited to get started. First, let's login/create an account.
+
+Would you like to login or create an account:
+1. Create an Account
+2. Login
+
+> 1
+
+Awesome! Let's create an account. We're going to need some information from you.
+
+What's your email?:
+> enzo@coglitore.com
+
+What's your full name?:
+> Enzo Coglitore
+
+What's your date of birth?:
+> 04/17/2001
+
+And finally enter your password:
+> SamplePass123!
+
+Welcome to EVITE, Enzo! Now let's show you the options for what you have.
+
+1. Check account status (PREMIUM/GUEST)
+2. Check my parties
+3. RSVP to a party
+4. Create a new party
+
+> 1
+
+Your account status is "PREMIUM", Enzo.
+
+1. Check account status (PREMIUM/GUEST)
+2. Check my parties
+3. RSVP to a party
+4. Create a new party
+5. Logout
+
+> 2
+
+
+You have invites to three parties, Enzo.
+ 1. ["Steve's Halloween Party", [925 W 30th Street, Los Angeles, California], 04/20/20, 20 People, Spiderman Costume, Superhero Theme]
+ 2. ["Michael's Christmas Party", [1020 Shahidi Street, Thousand Oaks, California], 12/25/20, 49 People, Christmas]
+ 3. ["Kendra's Potluck Party", [1750  W 30th Street, Los Angeles, California], 06/15/20, 20 People, Thanksgiving Style]
+
+1. Check account status (PREMIUM/GUEST)
+2. Check my parties
+3. RSVP to a party
+4. Create a new party
+5. Logout
+
+> 3
+
+Which party would you like to RSVP for? 
+ 1. ["Steve's Halloween Party", [925 W 30th Street, Los Angeles, California], 04/20/20, 20 People, Spiderman Costume, Superhero Theme]
+ 2. ["Michael's Christmas Party", [1020 Shahidi Street, Thousand Oaks, California], 12/25/20, 49 People, Christmas]
+ 3. ["Kendra's Potluck Party", [1750  W 30th Street, Los Angeles, California], 06/15/20, 20 People, Thanksgiving Style]
+
+> 2
+
+Got it, we are RSVPing to that party.
+
+1. Check account status (PREMIUM/GUEST)
+2. Check my parties
+3. RSVP to a party
+4. Create a new party
+5. Logout
+
+> 4
+
+Let's create a new party! What type of party do you want to make?
+1. Regular Party
+2. Holiday Party
+3. Costume Party
+4. PotLuck Party
+
+> 2
+
+What do you want to name the party?
+
+> Enzo's Thanksgiving Dinner
+
+Where is it located?
+
+> 216 Wedgewood Ave, Los Gatos, California, 95070
+
+What date is this party?
+
+> 11/24/2020
+
+How many people do you want to invite?
+
+> 13
+
+Do people need to bring food (y/n):
+
+> y
+
+And what holiday is it?
+
+> Thanksgiving
+
+Got it, we've created your new party! Take a look here. ["Enzo's Thanksgiving Party", [216 Wedgewood Ave, Los Gatos, California, 95070], 11/24/20, 13 People, Thanksgiving]
+
+1. Check account status (PREMIUM/GUEST)
+2. Check my parties
+3. RSVP to a party
+4. Create a new party
+5. Logout
+
+> 5
+
+Thanks for using EVITE!
+

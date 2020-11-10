@@ -62,31 +62,45 @@ public abstract class Product implements Comparable<Product> {
 		}
 	
 	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(price);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(rating);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Product))
+			return false;
+		Product other = (Product) obj;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
+			return false;
+		if (Double.doubleToLongBits(rating) != Double.doubleToLongBits(other.rating))
+			return false;
+		return true;
+	}
 	
 
 	
 	
-	 public boolean equals(Object obj) 
-	    { 
-	          
-	    // checking if both the object references are  
-	    // referring to the same object. 
-	    if(this == obj) 
-	            return true; 
-	          
-	    
-	        if(obj == null || obj.getClass()!= this.getClass()) 
-	            return false; 
-	          
-	        // type casting of the argument.  
-	        Product product = (Product) obj; 
-	          
-	        // comparing the state of argument with  
-	        // the state of 'this' Object. 
-	        return (product.name == this.name && product.price == this.price && product.rating == this.rating); 
-	    }
-
-
+	 
 
 
 }
